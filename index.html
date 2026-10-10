@@ -183,7 +183,7 @@
     <footer class="footer">
       <span>Source: project-curated SA2 BNPL metrics, ABS 2021 SA2 boundaries and demographic context.</span>
       <span>Regions without a measure are shown in grey. IRSD uses five equal-sized percentile groups; other measures use distribution-aware percentile classes.</span>
-      <span class="method-note">使用weighted来将postcode的数据加入sa2区域。</span>
+      <span class="method-note">Postcode data is allocated to SA2 regions using weighting.</span>
     </footer>
   </main>
   <div class="tooltip" id="tooltip" role="tooltip"></div>
@@ -194,7 +194,6 @@
     total_value_weighted: { label: "BNPL value", short: "Total value", format: v => money(v), aggregate: "sum" },
     bnpl_value_per_1000_population: { label: "BNPL value / 1,000 residents", short: "Value per 1k", format: v => money(v), aggregate: "median" },
     bnpl_consumers_per_1000_population: { label: "BNPL consumers / 1,000 residents", short: "Consumers per 1k", format: v => number(v, 2), aggregate: "median" },
-    high_risk_rate: { label: "High-risk transaction rate", short: "High-risk rate", format: v => percent(v), aggregate: "median" },
     irsd_score: { label: "Socioeconomic disadvantage score", short: "IRSD score", format: v => number(v, 0), aggregate: "median" }
   };
   const stateLabels = {"1":"NSW","2":"VIC","3":"QLD","4":"SA","5":"WA","6":"TAS","7":"NT","8":"ACT"};
